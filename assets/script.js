@@ -80,8 +80,6 @@ if(currentHour > 17){
   $('#5PM').addClass('future')
 }
 
-
-
 setInterval(realTime, 1000)
 // setInterval(realHour, 1000)
 // setInterval(realMinutes, 1000);
