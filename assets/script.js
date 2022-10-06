@@ -86,3 +86,21 @@ setInterval(realTime, 1000)
 // setInterval(realSeconds, 1000);
 // setInterval(countdown, 1);
 })
+
+$(".saveBtn").on("click", function(){
+  var id = $(this).attr("id")
+  console.log(id.split("-")[1])
+  var text = $("#description-"+(id.split("-")[1])).val()
+  console.log(text)
+  localStorage.setItem(id,text)
+})
+
+$("#description-9").val(localStorage.getItem("reserve-9"));
+$("#description-10").val(localStorage.getItem("reserve-10"));
+$("#description-11").val(localStorage.getItem("reserve-11"));
+$("#description-12").val(localStorage.getItem("reserve-12"));
+$("#description-1").val(localStorage.getItem("reserve-1"));
+$("#description-2").val(localStorage.getItem("reserve-2"));
+$("#description-3").val(localStorage.getItem("reserve-3"));
+$("#description-4").val(localStorage.getItem("reserve-4"));
+$("#description-5").val(localStorage.getItem("reserve-5"));
