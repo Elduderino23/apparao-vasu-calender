@@ -57,6 +57,48 @@ if(currentHour > 9){
 }else{
   $('#description-9').addClass('future').removeClass('past').removeClass('present')
 ```
+9-12 time slots were straight forward because those numbers don't change whether its military time or not. 1-5 time slots had to be changed into 13-17 hour time slots because the earlier equation uses 
+ military time so it had to be incorporated.
+
+ the following if, else if, else demonstrates the idea:
+
+ ```Javascript
+if(currentHour > 13){
+  $('#description-1').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 13){
+  $('#description-1').addClass('present').removeClass('past').removeClass('future')
+}else{
+  $('#description-1').addClass('future').removeClass('past').removeClass('present')
+}
+if(currentHour > 14){
+  $('#description-2').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 14){
+  $('#description-2').addClass('present').removeClass('past').removeClass('future')
+}else{
+  $('#description-2').addClass('future').removeClass('past').removeClass('present')
+}
+if(currentHour > 15){
+  $('#description-3').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 15){
+  $('#description-3').addClass('present').removeClass('past').removeClass('future')
+}else{
+  $('#description-3').addClass('future').removeClass('past').removeClass('present')
+}
+if(currentHour > 16){
+  $('#description-4').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 16){
+  $('#description-4').addClass('present').removeClass('past').removeClass('future')
+}else{
+  $('#description-4').addClass('future').removeClass('past').removeClass('present')
+}
+if(currentHour > 17){
+  $('#description-5').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 17){
+  $('#description-5').addClass('present').removeClass('past').removeClass('future')
+}else{
+  $('#description-5').addClass('future').removeClass('past').removeClass('present')
+}
+ ```
 
 ## Result
 
