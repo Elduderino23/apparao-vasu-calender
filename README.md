@@ -99,7 +99,29 @@ if(currentHour > 17){
   $('#description-5').addClass('future').removeClass('past').removeClass('present')
 }
  ```
+The last part was the ability to type an event into a textfield, saving it, and having the typed field stay after refreshing the field. This boiled down to setting and getting items in localStorage and making a function dedicated to submitting.
 
+The below code is the result:
+
+```Javascript
+$(".saveBtn").on("click", function(){
+  var id = $(this).attr("id")
+  console.log(id.split("-")[1])
+  var text = $("#description-"+(id.split("-")[1])).val()
+  console.log(text)
+  localStorage.setItem(id,text)
+})
+
+$("#description-9").val(localStorage.getItem("reserve-9"));
+$("#description-10").val(localStorage.getItem("reserve-10"));
+$("#description-11").val(localStorage.getItem("reserve-11"));
+$("#description-12").val(localStorage.getItem("reserve-12"));
+$("#description-1").val(localStorage.getItem("reserve-1"));
+$("#description-2").val(localStorage.getItem("reserve-2"));
+$("#description-3").val(localStorage.getItem("reserve-3"));
+$("#description-4").val(localStorage.getItem("reserve-4"));
+$("#description-5").val(localStorage.getItem("reserve-5"));
+```
 ## Result
 
 This challenge is graded based on the following criteria: 
