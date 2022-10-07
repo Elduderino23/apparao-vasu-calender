@@ -1,5 +1,4 @@
-// var businessHours = [];
-// var listHours = ["9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM",]
+
 $(document).ready(function () {
 
 var realTime = function () {
