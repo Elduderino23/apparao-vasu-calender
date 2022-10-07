@@ -1,6 +1,5 @@
-// $("#currentDay").text(moment().format("[Today], dddd, MMMM Do YYYY h:mm:ss a"));
-var businessHours = [];
-var listHours = ["9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM",]
+// var businessHours = [];
+// var listHours = ["9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM",]
 $(document).ready(function () {
 
 var realTime = function () {
@@ -8,83 +7,74 @@ var realTime = function () {
     $("#currentDay").text(currentTime)
 }
 var currentHour = moment().format("HH")
-// var currentHour = 23;
-if(currentHour < 12){
-  currentHour += "AM";
-}else{
-  currentHour -= 12;
-  currentHour += "PM";
-}
 
+console.log(currentHour)
+console.log(typeof currentHour)
 if(currentHour > 9){
-  $('#9AM').addClass('past')
-}else if(currentHour === 9){
-  $('#9AM').addClass('present')
+  $('#description-9').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 9){
+  $('#description-9').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#9AM').addClass('future')
+  $('#description-9').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 10){
-  $('#10AM').addClass('past')
-}else if(currentHour === 10){
-  $('#10AM').addClass('present')
+  $('#description-10').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 10){
+  $('#description-10').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#10AM').addClass('future')
+  $('#description-10').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 11){
-  $('#11AM').addClass('past')
-}else if(currentHour === 11){
-  $('#11AM').addClass('present')
+  $('#description-11').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 11){
+  $('#description-11').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#11AM').addClass('future')
+  $('#description-11').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 12){
-  $('#12PM').addClass('past')
-}else if(currentHour === 12){
-  $('#12PM').addClass('present')
+  $('#description-12').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 12){
+  $('#description-12').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#12PM').addClass('future')
+  $('#description-12').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 13){
-  $('#1PM').addClass('past')
-}else if(currentHour === 13){
-  $('#1PM').addClass('present')
+  $('#description-1').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 13){
+  $('#description-1').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#1PM').addClass('future')
+  $('#description-1').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 14){
-  $('#2PM').addClass('past')
-}else if(currentHour === 14){
-  $('#2PM').addClass('present')
+  $('#description-2').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 14){
+  $('#description-2').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#2PM').addClass('future')
+  $('#description-2').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 15){
-  $('#3PM').addClass('past')
-}else if(currentHour === 15){
-  $('#3PM').addClass('present')
+  $('#description-3').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 15){
+  $('#description-3').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#3PM').addClass('future')
+  $('#description-3').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 16){
-  $('#4PM').addClass('past')
-}else if(currentHour === 16){
-  $('#4PM').addClass('present')
+  $('#description-4').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 16){
+  $('#description-4').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#4PM').addClass('future')
+  $('#description-4').addClass('future').removeClass('past').removeClass('present')
 }
 if(currentHour > 17){
-  $('#5PM').addClass('past')
-}else if(currentHour === 17){
-  $('#5PM').addClass('present')
+  $('#description-5').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 17){
+  $('#description-5').addClass('present').removeClass('past').removeClass('future')
 }else{
-  $('#5PM').addClass('future')
+  $('#description-5').addClass('future').removeClass('past').removeClass('present')
 }
 
 setInterval(realTime, 1000)
-// setInterval(realHour, 1000)
-// setInterval(realMinutes, 1000);
-// setInterval(realSeconds, 1000);
-// setInterval(countdown, 1);
 })
 
 $(".saveBtn").on("click", function(){
