@@ -31,7 +31,11 @@ var realTime = function () {
     $("#currentDay").text(currentTime)
 }
 ```
+currentDay was the id in the HTML that controlled the date so adding a function that calculated the current time, in the form of a variable aptly named currentTime, display the time in real time. The interval down below set the time for every 1000 millisecond, one second,:
 
+```Javascript
+setInterval(realTime, 1000)
+```
 
 
 ## Result
