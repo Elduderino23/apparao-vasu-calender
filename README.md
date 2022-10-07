@@ -45,6 +45,18 @@ The set up is shown below:
 var currentHour = moment().format("HH")
 ```
 
+The tricky part was to coordinate the time with the colors. In order to achieve this, an if, else if, and else statement had to be made within each if statement was the "currentHour > past" condition. This was so that function could recognize that it was before the time slot and assign the color grey for past. the else if had the condition of "currentHour == 9" the double equal signs signifies that the function want the value only. else was left behind because the other two laid the conditions already so the third was known. In between each statement was the correct syntax of JQuery of adding a class and removing a class. Since the past, present, and future class was hard codded into the HTML, it was necessary to remove certain classes for different parts of the time, example being remove past and future class in order to let red show for present.
+
+the following if, else if, and else statement combo perfectly encapsulates the point:
+
+```Javascript
+if(currentHour > 9){
+  $('#description-9').addClass('past').removeClass('present').removeClass('future')
+}else if(currentHour == 9){
+  $('#description-9').addClass('present').removeClass('past').removeClass('future')
+}else{
+  $('#description-9').addClass('future').removeClass('past').removeClass('present')
+```
 
 ## Result
 
