@@ -37,6 +37,14 @@ currentDay was the id in the HTML that controlled the date so adding a function 
 setInterval(realTime, 1000)
 ```
 
+The second part, and the hardest part, of styling the javascript with JQuery was syncing the color code, red being present; green being future; grey being past, with the actual time. In order to accomplish this herculean task, the first step was to make a variable within the realTime function that corresponded the time with the colors. Rather than do a standard 12 hour cycle, the choice to do "military time", 24 hour cycle, as the basis for color control made it easier for the function to recognize what color for what time. 
+
+The set up is shown below:
+
+```Javascript
+var currentHour = moment().format("HH")
+```
+
 
 ## Result
 
